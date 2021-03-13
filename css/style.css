@@ -1,0 +1,457 @@
+/*---------------------*/
+/* 		Basic Setup	   */
+/*---------------------*/
+
+
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	color: #555;
+    font-family: 'Lato','Arial',sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+	
+}
+html {
+	scroll-behavior: smooth;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;	
+}
+
+img {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+ 
+}
+
+
+section {
+	padding: 5rem 0;
+}
+
+
+/*
+
+=============
+	HEADER
+=============
+*/
+
+  header {
+	min-height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+	  url(./img/collection-of-audies.jpg) center/cover no-repeat;
+  }
+ /* .video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 96%;
+	object-fit: cover;
+	z-index: -2;
+  }
+*/
+  nav {
+	
+	padding: 1rem 1.5rem;
+  }
+  .nav-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0;
+  }
+
+  .logo {
+	height: 50px;
+  }
+
+  .links-container {
+	height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+  }
+
+  .show-links {
+	height: 200px;
+  }
+
+	
+	.nav-center {
+	  width: 90vw;
+	  max-width: 1170px;
+	  margin: 0 auto;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	}
+
+	.links-container {
+	  height: auto !important;
+	}
+	.links {
+	  display: flex;
+	}
+	.links a {
+	
+	  color:rgb(71, 41, 41);
+	  font-size: 1.1rem;
+	  text-transform: capitalize;
+	  letter-spacing: var(--spacing);
+	  display: block;
+	  transition: var(--transition);
+	  margin: 0 1rem;
+	  font-weight: bold;
+	  padding: 0;
+	}
+	.links a:hover {
+	  color:rgb(148, 22, 22);
+	}
+  
+  
+/* BANNER */
+
+  .banner {
+	min-height: 750px;
+	display: grid;
+	place-items: center;
+	text-align: center;
+  }
+  .container h1 {
+	color: white;
+	text-transform: uppercase;
+  }
+  .container p {
+	color: rgb(187, 187, 187);
+	max-width: 40rem;
+	margin: 0 auto;
+	margin-bottom: 1.25rem;
+  } 
+  
+/*
+=========
+Explore Button
+=========
+*/
+
+.btn {
+	text-transform: uppercase;
+	background: transparent;
+	color:rgb(255, 255, 255);
+	padding: 0.375rem 0.75rem;
+	letter-spacing: 5px;
+	display: inline-block;
+	font-size: 0.875rem;
+	border: 2px solid rgb(148, 22, 22);
+}
+
+.btn:hover {
+	background:brown;
+	border-color: white;
+  }
+
+  /*
+ ================
+ About US Section 
+ ================ 
+ */
+
+ .title h2{
+	 text-transform :uppercase;
+	 text-align: center;
+ }
+
+ .title span {
+	 color:brown;
+ }
+
+.section-center {
+	width: 90vw;
+	margin: 0 auto;
+	max-width: 1170px;
+}
+
+main {
+	min-height: 100vh;
+	display:grid;
+	place-items: center;
+}
+
+/*Image*/
+.about-img{
+	margin-bottom: 2rem;
+}
+
+.about-img img{
+	border-radius:10px;
+	object-fit: cover;
+	height: 20rem;
+}
+
+.about-center{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2rem;
+}
+
+.about{
+	background:rgb(248, 248, 248);
+	border-radius: 20px;
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+
+.btn-container{
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;	
+}
+.tab-btn:nth-child(1) {
+	border-top-left-radius: var(--radius);
+  }
+  .tab-btn:nth-child(3) {
+	border-top-right-radius: var(--radius);
+  }
+
+  .tab-btn {
+	padding: 1rem 0;
+	border: none;
+	text-transform: capitalize;
+	font-size: 1rem;
+	display: block;
+	background:rgb(94, 79, 79);
+	cursor: pointer;
+	transition: var(--transition);
+	letter-spacing: var(--spacing);
+  }
+  .tab-btn:hover:not(.active) {
+	background:rgb(187, 187, 187);
+	color: black;
+  }
+
+  .about-content{
+	  border-bottom-left-radius: 20px;
+	  border-bottom-right-radius: 20px;
+	  padding:2rem 1.5rem;
+  }
+
+  /*Hide content*/
+
+  .content{
+	  display:none;
+  }
+
+  .tab-btn.active{
+	  background-color: chocolate;
+  }
+  .content.active{
+	  display: block;
+  }
+
+
+  /*
+  =================
+  Services
+  =================
+  */
+
+  /*Line under the title*/
+.hetitle h3:after{
+display:block;
+height: 2px;
+background-color:rgb(148, 22, 22) ;
+content: " ";
+width: 200px;
+margin: 0 auto;
+margin-top: 10px;
+} 
+
+.hetitle :after{
+	display:block;
+	height: 2px;
+	background-color:rgb(148, 22, 22) ;
+	content: " ";
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 10px;
+	} 
+  .section .title {
+	  margin-top: 30px;
+	  background-color: #a09c9c;
+  }
+
+  .plan {
+	  margin-left: 20px;
+  }
+
+
+
+.plan{
+	max-width: 1140px;
+	text-align: center;
+}
+.plan-box{
+	border-radius: 5px;
+	width: 90%;
+	margin-left: 100%;
+	border: 2px solid rgb(148, 22, 22);
+	border-radius: 5px;
+	background-color: rgb(250, 250, 250);
+
+}
+
+.small li {
+	padding-bottom: 20px;
+}
+
+
+/*
+=====================
+		Our Cars
+=====================
+*/
+
+
+.car-logo img{
+	height: 50px;
+	float:left;
+}
+
+.car-logo a{
+	float:left;
+	margin-top: 11PX;
+	margin-left: 15PX;
+
+}
+.cars{
+	position: relative;
+	margin-left: 900px;
+	display: block;
+}
+
+.audi{
+	height: 100px;
+	padding-right: 20px;
+}
+
+li a {
+	color:brown
+}
+
+video{
+	position:absolute;
+	object-fit:cover;
+	width:100%;
+	height: 50%;
+	z-index: -2;
+	margin-top: -15px;
+}
+/*
+===========
+Footer
+===========
+*/
+
+ footer{
+	 background-color: #333;
+	 padding: 40px;
+	/* font-size: 80%;*/
+ }
+ .footer-nav{
+	font-size: 80%;
+	 float:left;
+ }
+ .social-links{
+	
+	 float:right;
+ }
+ 
+ .footer-nav li,
+ .social-links li {
+	 display:inline-block;
+	 margin-right: 20px;
+ }
+
+ footer p {
+	 padding-left: 100px;
+	 text-align: center;
+ }
+
+ .footer-nav li:last-child,
+ .social-links li:last-child{
+	 margin-right: 0;
+ }
+
+ .footer-nav li a:link,
+ .footer-nav li a:visited,
+ .social-links li a:link,
+ .social-links li a:visited{
+	 color: #888;
+	 transition: color 0.2s;
+ }
+ 
+ .footer-nav li a:hover,
+ .footer-nav li a:active{
+	 color:cornsilk
+ }
+
+ .facebook,
+ .twitter,
+ .google,
+ .instagram{
+	 transition: color 0.5s;
+ }
+ 
+ .facebook:hover{
+    color: #3b5998
+}
+.twitter:hover{
+    color:#00aced
+}
+.google:hover {
+    color: #dd4b39;
+}
+.instagram:hover{
+    color: #fb3958;
+}
